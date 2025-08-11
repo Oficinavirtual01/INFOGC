@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
     <html>
     <head>
       <title>Análisis Estadístico Delictual de JPD GODOY CRUZ</title>
@@ -52,9 +52,6 @@
       </style>
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
       <script type="text/javascript">
-        // Se define el texto del período dinámicamente
-        const periodoTexto = 'Quincena';
-
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawAllCharts);
 
@@ -68,12 +65,16 @@
 
         function drawChartDelitos() {
           var data = google.visualization.arrayToDataTable([
-            ['Categoría', periodoTexto + ' 1', periodoTexto + ' 2'],
-            ['Bicicleta', 4, 2],
-['Moto', 8, 5],
-['Auto/camioneta', 10, 9],
-['Otro - cuatri/mono patín', 2, 2],
-['Ninguno', 30, 38]
+            ['Categoría', 'Quincena 1', 'Quincena 2'],
+            ['Robo Agrav. EGT', 1, 0],
+['Robo c/Arma Blanca', 1, 0],
+['Robo Agrav.', 11, 5],
+['Hurto', 8, 7],
+['Hurto Agrav.', 9, 9],
+['Robo x Escala', 3, 3],
+['Robo', 15, 24],
+['Robo c/Arma Fuego', 6, 11],
+['Robo EGT', 1, 2]
           ]);
           var options = {
             title: 'Análisis estadístico de los Delitos',
@@ -89,14 +90,14 @@
 
         function drawChartDias() {
           var data = google.visualization.arrayToDataTable([
-            ['Categoría', periodoTexto + ' 1', periodoTexto + ' 2'],
-            ['Martes', 12, 8],
-['Jueves', 6, 4],
-['Lunes', 10, 8],
-['Domingo', 7, 8],
-['Viernes', 6, 7],
-['Sábado', 8, 11],
-['Miércoles', 5, 10]
+            ['Categoría', 'Quincena 1', 'Quincena 2'],
+            ['Miércoles', 13, 7],
+['Lunes', 9, 5],
+['Martes', 10, 10],
+['Jueves', 5, 6],
+['Sábado', 10, 14],
+['Viernes', 5, 11],
+['Domingo', 3, 8]
           ]);
           var options = {
             title: 'Análisis por Día de la Semana',
@@ -111,11 +112,11 @@
 
         function drawChartHorario() {
           var data = google.visualization.arrayToDataTable([
-            ['Categoría', periodoTexto + ' 1', periodoTexto + ' 2'],
-            ['☀️ Tarde (12:00 - 17:59)', 13, 9],
-['🌆 Noche (18:00 - 23:59)', 20, 18],
-['🌙 Madrugada (00:00 - 05:59)', 10, 13],
-['🌤️ Mañana (06:00 - 11:59)', 11, 16]
+            ['Categoría', 'Quincena 1', 'Quincena 2'],
+            ['☀️ Tarde (12:00 - 17:59)', 12, 9],
+['🌆 Noche (18:00 - 23:59)', 21, 23],
+['🌤️ Mañana (06:00 - 11:59)', 12, 14],
+['🌙 Madrugada (00:00 - 05:59)', 10, 15]
           ]);
           var options = {
             title: 'Análisis por Rango Horario',
@@ -132,16 +133,16 @@
 
         function drawChartDependencias() {
           var data = google.visualization.arrayToDataTable([
-            ['Categoría', periodoTexto + ' 1', periodoTexto + ' 2'],
-            ['Cria_37', 9, 3],
-['SC_ZIM', 4, 2],
-['Cria_40', 15, 12],
-['Cria_34', 11, 9],
-['SC_GB', 3, 4],
-['Cria_52', 4, 7],
-['Cria_27', 3, 6],
-['Cria__7', 4, 9],
-['Cria_50', 1, 4]
+            ['Categoría', 'Quincena 1', 'Quincena 2'],
+            ['SC_GB', 6, 2],
+['Cria_37', 8, 4],
+['Cria_52', 7, 5],
+['SC_ZIM', 4, 4],
+['Cria__7', 7, 9],
+['Cria_40', 10, 13],
+['Cria_34', 8, 12],
+['Cria_27', 4, 7],
+['Cria_50', 1, 5]
           ]);
           var options = {
             title: 'Análisis por Dependencia',
@@ -157,13 +158,13 @@
         
         function drawChartLugares() {
           var data = google.visualization.arrayToDataTable([
-            ['Categoría', periodoTexto + ' 1', periodoTexto + ' 2'],
-            ['Interior taxi, Remis', 3, 0],
-['Vía Pública', 30, 27],
-['Domicilio', 12, 14],
-['Comercio', 9, 12],
-['Establecimiento Educativo', 0, 2],
-['Interior Transporte Publico', 0, 1]
+            ['Categoría', 'Quincena 1', 'Quincena 2'],
+            ['Vía Pública', 30, 28],
+['Interior taxi, Remis', 1, 1],
+['Establecimiento Educativo', 1, 1],
+['Comercio', 10, 12],
+['Domicilio', 13, 17],
+['Interior Transporte Publico', 0, 2]
           ]);
           var options = {
             title: 'Análisis por Tipo de Lugar',
@@ -181,15 +182,15 @@
     <body>
       <div class="container">
         <h1>Análisis Estadístico Delictual de JPD GODOY CRUZ</h1>
-        <h2>📅 COMPARATIVA DE QUINCENA</h2>
-        <p class="date-range">Quincena del 6/7/2025 al 20/7/2025 Vs. Quincena del 21/7/2025 al 4/8/2025</p>
+        <h2>📅 COMPARATIVA DEL PERÍODO</h2>
+        <p class="date-range">Quincena del 13/7/2025 al 26/7/2025 Vs. Quincena del 27/7/2025 al 9/8/2025</p>
         
         
     <div class="summary-grid">
       <div class="summary-box">
         <div class="summary-title">Total Delitos</div>
-        <div class="summary-value">Quincena 1: 54 | Quincena 2: 56</div>
-        <div class="variation variation-up">▲ 4% (+2)</div>
+        <div class="summary-value">Quincena 1: 55 | Quincena 2: 61</div>
+        <div class="variation variation-up">▲ 11% (+6)</div>
       </div>
   
     <div class="summary-box">
@@ -208,7 +209,7 @@
     <div class="table-container">
       <table>
         <thead>
-          <tr>
+           <tr>
             <th>Categoría</th>
             <th>Quincena 1</th>
             <th>Quincena 2</th>
@@ -217,35 +218,55 @@
         </thead>
         <tbody>
           <tr>
-              <td>Bicicleta</td>
-              <td>4</td>
-              <td>2</td>
-              <td class="frio">▼ 50% (-2)</td>
+              <td>Robo Agrav. EGT</td>
+              <td>1</td>
+              <td>0</td>
+              <td class="frio">▼ 100% (-1)</td>
             </tr><tr>
-              <td>Moto</td>
-              <td>8</td>
+              <td>Robo c/Arma Blanca</td>
+              <td>1</td>
+              <td>0</td>
+              <td class="frio">▼ 100% (-1)</td>
+            </tr><tr>
+              <td>Robo Agrav.</td>
+              <td>11</td>
               <td>5</td>
-              <td class="frio">▼ 38% (-3)</td>
+              <td class="frio">▼ 55% (-6)</td>
             </tr><tr>
-              <td>Auto/camioneta</td>
-              <td>10</td>
+              <td>Hurto</td>
+              <td>8</td>
+              <td>7</td>
+              <td class="neutro">▼ 13% (-1)</td>
+            </tr><tr>
+              <td>Hurto Agrav.</td>
               <td>9</td>
-              <td class="neutro">▼ 10% (-1)</td>
-            </tr><tr>
-              <td>Otro - cuatri/mono patín</td>
-              <td>2</td>
-              <td>2</td>
+              <td>9</td>
               <td class="neutro">· 0% (0)</td>
             </tr><tr>
-              <td>Ninguno</td>
-              <td>30</td>
-              <td>38</td>
-              <td class="muy-caliente">▲ 27% (+8)</td>
+              <td>Robo x Escala</td>
+              <td>3</td>
+              <td>3</td>
+              <td class="neutro">· 0% (0)</td>
+            </tr><tr>
+              <td>Robo</td>
+              <td>15</td>
+              <td>24</td>
+              <td class="muy-caliente">▲ 60% (+9)</td>
+            </tr><tr>
+              <td>Robo c/Arma Fuego</td>
+              <td>6</td>
+              <td>11</td>
+              <td class="caliente">▲ 83% (+5)</td>
+            </tr><tr>
+              <td>Robo EGT</td>
+              <td>1</td>
+              <td>2</td>
+              <td class="caliente">▲ 100% (+1)</td>
             </tr>
         </tbody>
       </table>
     </div>
-    <div class="conclusion">El análisis de delitos muestra una tendencia ▲ 4%. El mayor aumento de hechos se registró en <strong>Ninguno (▲ 27% (+8))</strong>. Mientras que la mayor disminución fue en <strong>Bicicleta (▼ 50% (-2))</strong>.</div>
+    <div class="conclusion">El análisis de delitos muestra una tendencia ▲ 11%. El mayor aumento de hechos se registró en <strong>Robo EGT (▲ 100% (+1))</strong>. Mientras que la mayor disminución fue en <strong>Robo Agrav. EGT (▼ 100% (-1))</strong>.</div>
   
         
     <div class="header">📅 ANÁLISIS POR DÍA DE LA SEMANA</div>
@@ -253,7 +274,7 @@
     <div class="table-container">
       <table>
         <thead>
-          <tr>
+           <tr>
             <th>Categoría</th>
             <th>Quincena 1</th>
             <th>Quincena 2</th>
@@ -262,45 +283,45 @@
         </thead>
         <tbody>
           <tr>
-              <td>Martes</td>
-              <td>12</td>
-              <td>8</td>
-              <td class="frio">▼ 33% (-4)</td>
-            </tr><tr>
-              <td>Jueves</td>
-              <td>6</td>
-              <td>4</td>
-              <td class="frio">▼ 33% (-2)</td>
+              <td>Miércoles</td>
+              <td>13</td>
+              <td>7</td>
+              <td class="frio">▼ 46% (-6)</td>
             </tr><tr>
               <td>Lunes</td>
+              <td>9</td>
+              <td>5</td>
+              <td class="frio">▼ 44% (-4)</td>
+            </tr><tr>
+              <td>Martes</td>
               <td>10</td>
-              <td>8</td>
-              <td class="neutro">▼ 20% (-2)</td>
+              <td>10</td>
+              <td class="neutro">· 0% (0)</td>
             </tr><tr>
-              <td>Domingo</td>
-              <td>7</td>
-              <td>8</td>
-              <td class="neutro">▲ 14% (+1)</td>
-            </tr><tr>
-              <td>Viernes</td>
+              <td>Jueves</td>
+              <td>5</td>
               <td>6</td>
-              <td>7</td>
-              <td class="neutro">▲ 17% (+1)</td>
+              <td class="neutro">▲ 20% (+1)</td>
             </tr><tr>
               <td>Sábado</td>
-              <td>8</td>
-              <td>11</td>
-              <td class="caliente">▲ 38% (+3)</td>
-            </tr><tr>
-              <td>Miércoles</td>
-              <td>5</td>
               <td>10</td>
-              <td class="caliente">▲ 100% (+5)</td>
+              <td>14</td>
+              <td class="muy-caliente">▲ 40% (+4)</td>
+            </tr><tr>
+              <td>Viernes</td>
+              <td>5</td>
+              <td>11</td>
+              <td class="caliente">▲ 120% (+6)</td>
+            </tr><tr>
+              <td>Domingo</td>
+              <td>3</td>
+              <td>8</td>
+              <td class="caliente">▲ 167% (+5)</td>
             </tr>
         </tbody>
       </table>
     </div>
-    <div class="conclusion">El análisis de días de la semana muestra una tendencia ▲ 4%. El mayor aumento de hechos se registró en <strong>Miércoles (▲ 100% (+5))</strong>. Mientras que la mayor disminución fue en <strong>Martes (▼ 33% (-4))</strong>.</div>
+    <div class="conclusion">El análisis de días de la semana muestra una tendencia ▲ 11%. El mayor aumento de hechos se registró en <strong>Domingo (▲ 167% (+5))</strong>. Mientras que la mayor disminución fue en <strong>Miércoles (▼ 46% (-6))</strong>.</div>
   
         
     <div class="header">🕒 ANÁLISIS POR RANGO HORARIO</div>
@@ -308,7 +329,7 @@
     <div class="table-container">
       <table>
         <thead>
-          <tr>
+           <tr>
             <th>Categoría</th>
             <th>Quincena 1</th>
             <th>Quincena 2</th>
@@ -318,29 +339,29 @@
         <tbody>
           <tr>
               <td>☀️ Tarde (12:00 - 17:59)</td>
-              <td>13</td>
+              <td>12</td>
               <td>9</td>
-              <td class="frio">▼ 31% (-4)</td>
+              <td class="frio">▼ 25% (-3)</td>
             </tr><tr>
               <td>🌆 Noche (18:00 - 23:59)</td>
-              <td>20</td>
-              <td>18</td>
-              <td class="neutro">▼ 10% (-2)</td>
+              <td>21</td>
+              <td>23</td>
+              <td class="caliente">▲ 10% (+2)</td>
+            </tr><tr>
+              <td>🌤️ Mañana (06:00 - 11:59)</td>
+              <td>12</td>
+              <td>14</td>
+              <td class="caliente">▲ 17% (+2)</td>
             </tr><tr>
               <td>🌙 Madrugada (00:00 - 05:59)</td>
               <td>10</td>
-              <td>13</td>
-              <td class="muy-caliente">▲ 30% (+3)</td>
-            </tr><tr>
-              <td>🌤️ Mañana (06:00 - 11:59)</td>
-              <td>11</td>
-              <td>16</td>
-              <td class="muy-caliente">▲ 45% (+5)</td>
+              <td>15</td>
+              <td class="muy-caliente">▲ 50% (+5)</td>
             </tr>
         </tbody>
       </table>
     </div>
-    <div class="conclusion">El análisis de rangos horarios muestra una tendencia ▲ 4%. El mayor aumento de hechos se registró en <strong>🌤️ Mañana (06:00 - 11:59) (▲ 45% (+5))</strong>. Mientras que la mayor disminución fue en <strong>☀️ Tarde (12:00 - 17:59) (▼ 31% (-4))</strong>.</div>
+    <div class="conclusion">El análisis de rangos horarios muestra una tendencia ▲ 11%. El mayor aumento de hechos se registró en <strong>🌙 Madrugada (00:00 - 05:59) (▲ 50% (+5))</strong>. Mientras que la mayor disminución fue en <strong>☀️ Tarde (12:00 - 17:59) (▼ 25% (-3))</strong>.</div>
   
         
     <div class="header">📍 ANÁLISIS POR DEPENDENCIA</div>
@@ -348,7 +369,7 @@
     <div class="table-container">
       <table>
         <thead>
-          <tr>
+           <tr>
             <th>Categoría</th>
             <th>Quincena 1</th>
             <th>Quincena 2</th>
@@ -357,55 +378,55 @@
         </thead>
         <tbody>
           <tr>
+              <td>SC_GB</td>
+              <td>6</td>
+              <td>2</td>
+              <td class="frio">▼ 67% (-4)</td>
+            </tr><tr>
               <td>Cria_37</td>
-              <td>9</td>
-              <td>3</td>
-              <td class="frio">▼ 67% (-6)</td>
+              <td>8</td>
+              <td>4</td>
+              <td class="frio">▼ 50% (-4)</td>
+            </tr><tr>
+              <td>Cria_52</td>
+              <td>7</td>
+              <td>5</td>
+              <td class="frio">▼ 29% (-2)</td>
             </tr><tr>
               <td>SC_ZIM</td>
               <td>4</td>
-              <td>2</td>
-              <td class="frio">▼ 50% (-2)</td>
+              <td>4</td>
+              <td class="neutro">· 0% (0)</td>
+            </tr><tr>
+              <td>Cria__7</td>
+              <td>7</td>
+              <td>9</td>
+              <td class="caliente">▲ 29% (+2)</td>
             </tr><tr>
               <td>Cria_40</td>
-              <td>15</td>
-              <td>12</td>
-              <td class="neutro">▼ 20% (-3)</td>
+              <td>10</td>
+              <td>13</td>
+              <td class="muy-caliente">▲ 30% (+3)</td>
             </tr><tr>
               <td>Cria_34</td>
-              <td>11</td>
-              <td>9</td>
-              <td class="neutro">▼ 18% (-2)</td>
+              <td>8</td>
+              <td>12</td>
+              <td class="caliente">▲ 50% (+4)</td>
             </tr><tr>
-              <td>SC_GB</td>
-              <td>3</td>
-              <td>4</td>
-              <td class="caliente">▲ 33% (+1)</td>
-            </tr><tr>
-              <td>Cria_52</td>
+              <td>Cria_27</td>
               <td>4</td>
               <td>7</td>
               <td class="caliente">▲ 75% (+3)</td>
             </tr><tr>
-              <td>Cria_27</td>
-              <td>3</td>
-              <td>6</td>
-              <td class="caliente">▲ 100% (+3)</td>
-            </tr><tr>
-              <td>Cria__7</td>
-              <td>4</td>
-              <td>9</td>
-              <td class="caliente">▲ 125% (+5)</td>
-            </tr><tr>
               <td>Cria_50</td>
               <td>1</td>
-              <td>4</td>
-              <td class="caliente">▲ 300% (+3)</td>
+              <td>5</td>
+              <td class="caliente">▲ 400% (+4)</td>
             </tr>
         </tbody>
       </table>
     </div>
-    <div class="conclusion">El análisis de dependencias muestra una tendencia ▲ 4%. El mayor aumento de hechos se registró en <strong>Cria_50 (▲ 300% (+3))</strong>. Mientras que la mayor disminución fue en <strong>Cria_37 (▼ 67% (-6))</strong>.</div>
+    <div class="conclusion">El análisis de dependencias muestra una tendencia ▲ 11%. El mayor aumento de hechos se registró en <strong>Cria_50 (▲ 400% (+4))</strong>. Mientras que la mayor disminución fue en <strong>SC_GB (▼ 67% (-4))</strong>.</div>
   
         
     <div class="header">🏠 ANÁLISIS POR TIPO DE LUGAR</div>
@@ -413,7 +434,7 @@
     <div class="table-container">
       <table>
         <thead>
-          <tr>
+           <tr>
             <th>Categoría</th>
             <th>Quincena 1</th>
             <th>Quincena 2</th>
@@ -422,45 +443,45 @@
         </thead>
         <tbody>
           <tr>
-              <td>Interior taxi, Remis</td>
-              <td>3</td>
-              <td>0</td>
-              <td class="frio">▼ 100% (-3)</td>
-            </tr><tr>
               <td>Vía Pública</td>
               <td>30</td>
-              <td>27</td>
-              <td class="neutro">▼ 10% (-3)</td>
+              <td>28</td>
+              <td class="neutro">▼ 7% (-2)</td>
             </tr><tr>
-              <td>Domicilio</td>
-              <td>12</td>
-              <td>14</td>
-              <td class="caliente">▲ 17% (+2)</td>
-            </tr><tr>
-              <td>Comercio</td>
-              <td>9</td>
-              <td>12</td>
-              <td class="muy-caliente">▲ 33% (+3)</td>
+              <td>Interior taxi, Remis</td>
+              <td>1</td>
+              <td>1</td>
+              <td class="neutro">· 0% (0)</td>
             </tr><tr>
               <td>Establecimiento Educativo</td>
-              <td>0</td>
-              <td>2</td>
-              <td class="caliente">▲ ∞ (+2)</td>
+              <td>1</td>
+              <td>1</td>
+              <td class="neutro">· 0% (0)</td>
+            </tr><tr>
+              <td>Comercio</td>
+              <td>10</td>
+              <td>12</td>
+              <td class="caliente">▲ 20% (+2)</td>
+            </tr><tr>
+              <td>Domicilio</td>
+              <td>13</td>
+              <td>17</td>
+              <td class="muy-caliente">▲ 31% (+4)</td>
             </tr><tr>
               <td>Interior Transporte Publico</td>
               <td>0</td>
-              <td>1</td>
-              <td class="caliente">▲ ∞ (+1)</td>
+              <td>2</td>
+              <td class="caliente">▲ ∞ (+2)</td>
             </tr>
         </tbody>
       </table>
     </div>
-    <div class="conclusion">El análisis de tipos de lugar muestra una tendencia ▲ 4%. El mayor aumento de hechos se registró en <strong>Establecimiento Educativo (▲ ∞ (+2))</strong>. Mientras que la mayor disminución fue en <strong>Interior taxi, Remis (▼ 100% (-3))</strong>.</div>
+    <div class="conclusion">El análisis de tipos de lugar muestra una tendencia ▲ 11%. El mayor aumento de hechos se registró en <strong>Interior Transporte Publico (▲ ∞ (+2))</strong>. Mientras que la mayor disminución fue en <strong>Vía Pública (▼ 7% (-2))</strong>.</div>
   
 
         <hr style="border: 1px solid #eee;">
         <div class="conclusion">
-          <p><strong>🏁 CONCLUSIÓN GENERAL:</strong> En conclusión, el período muestra un **aumento (▲ 4% (+2))** en la totalidad de hechos delictivos. Se recomienda prestar especial atención a las tendencias identificadas en los análisis detallados.</p>
+          <p><strong>🏁 CONCLUSIÓN GENERAL:</strong> En conclusión, el período muestra un **aumento (▲ 11% (+6))** en la totalidad de hechos delictivos. Se recomienda prestar especial atención a las tendencias identificadas en los análisis detallados.</p>
         </div>
 
         <div class="footer">
